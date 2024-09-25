@@ -13,7 +13,34 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Example {
-  id   Int    @id @default(autoincrement())
-  name String
+model aspirante {
+  id          Int      @id @default(autoincrement())
+  nombre      String
+  email       String
+  telefono    String
+  curp       String
+  username   String
+  carrera_deseada String
+  status     Status
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}	
+
+model periodos {
+  id         Int      @id @default(autoincrement())
+  nombre     String
+  descripcion String
+  status     StatusPeriodo
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}
+
+enum Status { 
+  ACEPTADO
+  RECHAZADO
+}
+
+enum StatusPeriodo { 
+  ACTIVO
+  INACTIVO
 }
