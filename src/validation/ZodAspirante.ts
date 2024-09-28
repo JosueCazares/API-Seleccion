@@ -22,3 +22,8 @@ export const ZodAspiranteIdObj = z.object({
     carrera_deseada : z.string(),
     status    : z.enum([Status.ACEPTADO, Status.RECHAZADO])
 })
+
+export const ZodAspiranteIdObjUpdate = z.object({
+    id: z.number().positive().min(1),
+    status: z.enum([Status.ACEPTADO, Status.RECHAZADO])
+})
