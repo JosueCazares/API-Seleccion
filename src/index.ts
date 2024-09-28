@@ -10,5 +10,5 @@ app.use('/api/aspirante',aspirante);
 
 
 app.listen(env.PORT, () => {
-    console.log(`API-USER  started on port ${env.PORT}`);
+    console.log(`API-SELECCION  started on port ${env.PORT}`);
 })

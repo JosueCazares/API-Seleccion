@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import e, { Router } from 'express';
 import type { Request, Response } from 'express';
 import { prisma } from '../db'
 import type { APIResponse } from '../lib/types';
@@ -42,8 +42,10 @@ router.post('/', async (req: Request, res: Response) => {
                 error: "Datos invalidos",
                 data: error.errors
             }
+            console.log(error.errors);
             return res.status(400).json(responseErrorZod)
         }
+        console.log(error);
         return res.status(500).json(responseError)
     }
 });
