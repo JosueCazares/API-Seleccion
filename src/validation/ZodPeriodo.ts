@@ -7,6 +7,9 @@ export const ZodPeriodoObj = z.object({
     status      : z.enum([StatusPeriodo.ABIERTA, StatusPeriodo.INACTIVO])
 })
 
-
-
-
+export const ZodPeriodoIdObj = z.object({
+    id         : z.number().positive().min(1),
+    nombre      : z.string(),
+    descripcion : z.string(),
+    status      : z.enum([StatusPeriodo.ABIERTA, StatusPeriodo.INACTIVO])
+})
