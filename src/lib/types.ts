@@ -1,6 +1,8 @@
  import type{
-    aspirante, 
-    Status
+    Aspirantes, 
+    Status,
+    Periodos,
+    StatusPeriodo
 
 } from '@prisma/client'; 
 
@@ -18,6 +20,8 @@ export interface LoginResponseData {
 }
 
 export type{
-    aspirante,
-    Status
+    Aspirantes,
+    Status,
+    Periodos,
+    StatusPeriodo
 }
